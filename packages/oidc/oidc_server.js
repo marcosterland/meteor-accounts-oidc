@@ -30,9 +30,7 @@ var createServiceRegistration = function(service) {
       serviceData.refreshToken = token.refresh_token;
     if (debug) console.log('XXX: serviceData:', serviceData);
 
-    var profile = {};
-    profile.name = userinfo.name;
-    profile.email = userinfo.email;
+    var profile = userinfo;
     if (debug) console.log('XXX: profile:', profile);
 
     return {
